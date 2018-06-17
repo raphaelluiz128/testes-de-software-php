@@ -1,0 +1,18 @@
+<?php
+
+ include ("pessoas.php";
+ class pessoasTest extends PHPUnitFramework_TestCase{
+	public function testType(){
+     $pessoa = new pessoa();
+     $this-> assertInternalType('init',$pessoa->getIdade());
+	}	 
+    public function testEnvelhecer(){
+	 $pessoa = new pessoa();
+	 $pessoa -> envelhecer(20);
+     $pessoa -> envelhecer(40);
+     $this -> assertEquals(60,$pessoa->getIdade());
+    }
+ }	
+	
+	
+?>
